@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <KS_Preorder>
+      <version>1.0.0</version>
+    </KS_Preorder>
+  </modules>
+  <frontend>
+    <routers>
+      <preorder>
+        <use>standard</use>
+          <args>
+            <module>KS_Preorder</module>
+            <frontName>preorder</frontName>
+          </args>
+      </preorder>
+    </routers>
+		<layout>
+		  <updates>
+			<preorder>
+			  <file>preorder.xml</file>
+			</preorder>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+  		<rewrite>        
+            <ks_preorder_onepagecontroller>
+                <from><![CDATA[#^/checkout/onepage/#]]></from> <!-- Mage_Wishlist_IndexController  -->
+                <to>/preorder/onepage/</to> <!-- KS_Testrewrite_Wishlist_IndexController  -->
+            </ks_preorder_onepagecontroller>
+		</rewrite>
+  <sales>
+	<order>
+	  <statuses>
+		<preorder translate="label"><label>Pre Order</label></preorder>
+	  </statuses>
+	  <states>
+		<new>
+		  <statuses>
+			<preorder />
+		  </statuses>
+		</new>
+	  </states>
+	</order>
+ </sales>
+    <helpers>
+      <preorder>
+        <class>KS_Preorder_Helper</class>
+      </preorder>
+    </helpers>
+	<blocks>
+	  <preorder>
+		<class>KS_Preorder_Block</class>
+	  </preorder>
+	</blocks>
+	
+	<resources>
+			<preorder_setup>
+				<setup>
+					<module>KS_Preorder</module>
+					<class>Mage_Eav_Model_Entity_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</preorder_setup>
+	</resources>
+	
+	<models>
+	  <preorder>
+		<class>KS_Preordert_Model</class>
+		<resourceModel>preorder_mysql4</resourceModel>
+	  </preorder>
+	</models>
+	
+	
+	<events>
+	  <checkout_cart_add_product_complete> <!-- identifier of the event we want to catch -->
+        <observers>
+          <checkout_cart_add_product_complete_handler> <!-- identifier of the event handler -->
+            <type>singleton</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>preorder/observer</class> <!-- observers class alias -->
+            <method>methodOne</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </checkout_cart_add_product_complete_handler>
+        </observers>
+      </checkout_cart_add_product_complete>
+	  <checkout_cart_update_item_complete> <!-- identifier of the event we want to catch -->
+        <observers>
+          <checkout_cart_update_item_complete_handler> <!-- identifier of the event handler -->
+            <type>singleton</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>preorder/observer</class> <!-- observers class alias -->
+            <method>methodTwo</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </checkout_cart_update_item_complete_handler>
+        </observers>
+      </checkout_cart_update_item_complete>
+    </events>
+	
+  </global>
+</config> 

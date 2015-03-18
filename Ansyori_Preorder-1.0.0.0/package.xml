@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Ansyori_Preorder</name>
+    <version>1.0.0.0</version>
+    <stability>beta</stability>
+    <license>open source</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Preorder for Magento</summary>
+    <description>Preorder for Magento</description>
+    <notes>beta version</notes>
+    <authors><author><name>Ansyrori</name><user>ansyori</user><email>ansyori@gmail.com</email></author></authors>
+    <date>2015-03-18</date>
+    <time>07:54:23</time>
+    <contents><target name="magelocal"><dir name="KS"><dir name="Preorder"><dir name="Block"><file name="Index.php" hash="2385eb58e7d5a8201c0290c1184262d0"/></dir><dir name="Helper"><file name="Data.php" hash="f955b181df1744b1b42052040fdbd669"/></dir><dir name="Model"><dir name="Mysql4"><file name="Setup.php" hash="fd9e617beb3b6fd16c8a1d5780b6ca1f"/></dir><file name="Observer.php" hash="aafbe8e550f5f8e95028052cef0ec969"/></dir><dir name="controllers"><file name="IndexController.php" hash="5690752784be818b5f407af2570fe50a"/><file name="OnepageController.php" hash="1b23093e2cdef97d746a8486637b2d81"/></dir><dir name="etc"><file name="config.xml" hash="f835055e25f462842dd98c016c098469"/></dir><dir name="sql"><dir name="preorder_setup"><file name="mysql4-install-1.0.0.php" hash="3376f23edfcea4b9ee74699e59023972"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="KS_Preorder.xml" hash="f47740d17558b1df6ae155037ce25fd9"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="preorder.xml" hash="4d844c1ae81210cd0f62374c9a8953fa"/></dir><dir name="template"><dir name="preorder"><file name="addtocart.phtml" hash="6ff787512a0d8f1787cde887ae0bc073"/><file name="default.phtml" hash="45d4c6a965032c3d2d8710e0311ca6e5"/><file name="email-default.phtml" hash="c031cd2a0efdb53471a77edab0259d13"/><file name="index.phtml" hash="395b5512423d31a9526f94e3d7dcc13a"/><file name="item.phtml" hash="669c1ef210f07e64f7aadc467efad9ec"/></dir></dir></dir></dir><dir name="rwd"><dir name="default"><dir name="layout"><file name="preorder.xml" hash="4d844c1ae81210cd0f62374c9a8953fa"/></dir><dir name="template"><dir name="preorder"><file name="addtocart.phtml" hash="6ff787512a0d8f1787cde887ae0bc073"/><file name="default.phtml" hash="45d4c6a965032c3d2d8710e0311ca6e5"/><file name="email-default.phtml" hash="c031cd2a0efdb53471a77edab0259d13"/><file name="index.phtml" hash="395b5512423d31a9526f94e3d7dcc13a"/><file name="item.phtml" hash="669c1ef210f07e64f7aadc467efad9ec"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
